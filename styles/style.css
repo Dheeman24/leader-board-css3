@@ -80,7 +80,14 @@ main{
 }
 
 /* courses style */
-
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    width: 253px;
+}
 .course .course-banner img{
     width: 224px;
     height: 104px;
@@ -92,6 +99,8 @@ ta but gap na dela ek class er e 2 ta name
 ---------------------------------------------*/
 .course-info{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .fa-star{
     font-size: 12px;
@@ -101,4 +110,34 @@ ta but gap na dela ek class er e 2 ta name
 }
 .fa-star.empty{
     color: #AEAEAE;
+}
+
+/* Media Queries */
+
+/* mobile devices */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .players, .blogs, .courses{
+        flex-direction: column;
+    }
+
+}
+/* tablet devices */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container{
+        width: 99%;
+        
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
