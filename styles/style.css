@@ -11,7 +11,7 @@ body{
     width: 870px;
     padding: 30px;
     margin-bottom: 21px;
-    
+    border-radius: 10px;
 }
 hr{
     border: 1px solid #D1D1D1;
